@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4CAF50</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="income">#1AAF3B</color>
+    <color name="outlay">#DE3C3C</color>
+    <color name="dailyExpense">#870A0A</color>
+    <color name="statistic">#533CDE</color>
+    <color name="card">#5CB3CF</color>
+
+    <color name="mainColor">#006B79</color>
+</resources>

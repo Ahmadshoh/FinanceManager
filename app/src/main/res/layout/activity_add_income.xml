@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/addIncomeFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/incomeToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/income"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addIncomeTitle"
+        android:text="Добавить доход"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:layout_marginTop="75dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addIncomeName"
+        android:layout_below="@+id/addIncomeTitle"
+        android:hint="@string/name"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addIncomeAmount"
+        android:layout_below="@+id/addIncomeName"
+        android:hint="@string/amount"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:ems="10"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/addIncomeDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:layout_below="@+id/addIncomeAmount"
+        android:hint="Комментарии к доходу"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addIncomeDescription"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addIncomeBtn"
+            android:background="@drawable/income_button_style"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:text="@string/add"/>
+    </LinearLayout>
+
+</RelativeLayout>

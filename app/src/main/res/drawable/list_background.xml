@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <layer-list>
+            <!-- SHADOW -->
+            <item>
+                <shape>
+                    <solid android:color="#8E8686"/>
+                    <corners android:radius="0dp"/>
+                </shape>
+            </item>
+            <item android:bottom="10px">
+                <shape>
+                    <padding android:bottom="5dp"/>
+                    <solid android:color="#FFEEFF" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

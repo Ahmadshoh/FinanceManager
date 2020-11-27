@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="#FFEEFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/categoryName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:layout_weight="4"
+            android:textSize="18sp"
+            android:text="Hello world"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/statisticSum"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textAlignment="textEnd"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:text="23454 tjs"
+            android:textColor="#000"
+            tools:ignore="RtlCompat" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

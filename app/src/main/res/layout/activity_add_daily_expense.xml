@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addIncomeFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layerType="software">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/dailyExpenseToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/dailyExpense"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/addIncomeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:text="Добавить дневной расход"
+        android:textAlignment="center"
+        android:textSize="36sp" />
+
+    <EditText
+        android:id="@+id/addDailyExpenseName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addIncomeTitle"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="45dp"
+        android:hint="@string/name">
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/addDailyExpenseAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addDailyExpenseName"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="45dp"
+        android:ems="10"
+        android:hint="@string/amount"
+        android:inputType="numberDecimal" />
+
+
+    <LinearLayout
+        android:id="@+id/spinnerLinear"
+        android:layout_below="@id/addDailyExpenseAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="45dp"
+        android:weightSum="5">
+
+        <Spinner
+            android:id="@+id/category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:layout_marginEnd="10dp"
+            android:autofillHints="Выберите категорию"/>
+
+        <ImageView
+            android:id="@+id/addCategoryView"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/add_category"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/dateSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerLinear"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="45dp"
+        android:bufferType="spannable"
+        android:ems="10"
+        android:hint="Выберите дату"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/addDailyExpenseDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateSelection"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="45dp"
+        android:ems="10"
+        android:hint="@string/description"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/addDailyExpenseButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addDailyExpenseDescription"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="45dp"
+        android:background="@drawable/daily_expense_button_style"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:text="@string/add" />
+
+
+</RelativeLayout>
